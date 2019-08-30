@@ -78,27 +78,18 @@ class LoaderMod(loader.Module):
             return
         uid = str(uuid.uuid4())
         try:
-            module = importlib.util.module_from_spec(ModuleSpec("friendly-telegram.modules.__extmod_" + uid,
+            module = importlib.util.module_from_spec(ModuleSpec("friendly-telegram.modules.__extmod" + uid,
                                                                 StringLoader(doc), origin="<string>"))
-            module.borg = uniborg.UniborgClient()
-            module._ = _
-            sys.modules["friendly-telegram.modules.__extmod_" + uid] = module
+            sys.modules["friendly-telegram.modules.__extmod" + uid] = module
             module.__spec__.loader.exec_module(module)
-        except Exception:  # That's okay because it might try to exit or something, who knows.
-            logger.exception("Loading external module failed.")
+        except BaseException:  # That's okay because it might try to exit or something, who knows.
             await message.edit(_("<code>Loading failed. See logs for details</code>"))
             return
         if "register" not in vars(module):
             await message.edit(_("<code>Module did not expose correct API"))
             logging.error("Module does not have register(), it has " + repr(vars(module)))
             return
-        vars(module)["register"](self.register_and_configure)  # Invoke generic registration
-        await self._pending_setup.pop()
-
-    def register_and_configure(self, instance):
-        self.allmodules.register_module(instance)
-        self.allmodules.send_config_one(instance, self._db, None)
-        self._pending_setup.append(instance.client_ready(self._client, self._db))
+        vars(module)["register"](self.allmodules.register_module)  # Invoke generic registration
 
     async def unloadmodcmd(self, message):
         """Unload module by class name"""

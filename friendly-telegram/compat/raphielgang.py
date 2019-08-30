@@ -231,8 +231,26 @@ class RaphielgangEvents():
                     if "pattern" not in kwargs.keys():
                         logger.error("Unable to register for outgoing messages without pattern.")
                         return func
-                    cmd = get_cmd_name(kwargs["pattern"])
-                    if not cmd:
+                    # Find command string: ugly af :)
+                    if kwargs["pattern"] == "(?i)":
+                        pattern = kwargs["pattern"][4:]
+                    else:
+                        pattern = kwargs["pattern"]
+                    if pattern[0] == "^":
+                        pattern = pattern[1:]
+                    if pattern[0] == ".":
+                        # That seems to be the normal command prefix
+                        pattern = pattern[1:]
+                    else:
+                        logger.error("Unable to register for non-command-based outgoing messages, pattern=" + pattern)
+                        return func
+                    # Find first non-alpha character and get all chars before it
+                    i = 0
+                    while pattern[i] in COMMAND_CHARS:
+                        i += 1
+                    cmd = pattern[:i]
+                    if not len(cmd):
+                        logger.error("Unable to identify command correctly, i=" + str(i) + ", pattern=" + pattern)
                         return func
 
                     @wraps(func)
