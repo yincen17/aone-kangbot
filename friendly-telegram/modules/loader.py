@@ -80,7 +80,9 @@ class LoaderMod(loader.Module):
         try:
             module = importlib.util.module_from_spec(ModuleSpec("friendly-telegram.modules.__extmod" + uid,
                                                                 StringLoader(doc), origin="<string>"))
-            sys.modules["friendly-telegram.modules.__extmod" + uid] = module
+            module.borg = uniborg.UniborgClient()
+            module._ = _
+            sys.modules["friendly-telegram.modules.__extmod_" + uid] = module
             module.__spec__.loader.exec_module(module)
         except BaseException:  # That's okay because it might try to exit or something, who knows.
             await message.edit(_("<code>Loading failed. See logs for details</code>"))

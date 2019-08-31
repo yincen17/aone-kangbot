@@ -7,10 +7,7 @@ COMMAND_CHARS = "abcdefghijklmnopqrstuvwxyz0123456789_"
 
 def get_cmd_name(pattern):
     # Find command string: ugly af :)
-<<<<<<< HEAD
     logger.debug(pattern)
-=======
->>>>>>> 10284eb... UNTESTED massive refactor of core, get closer to uniborg support
     if pattern == "(?i)":
         pattern = pattern[4:]
     if pattern[0] == "^":
@@ -18,12 +15,9 @@ def get_cmd_name(pattern):
     if pattern[0] == ".":
         # That seems to be the normal command prefix
         pattern = pattern[1:]
-<<<<<<< HEAD
-    elif pattern[:2] == r"\.":
+    elif pattern[:2] == "\.":
         # That seems to be the normal command prefix
         pattern = pattern[2:]
-=======
->>>>>>> 10284eb... UNTESTED massive refactor of core, get closer to uniborg support
     else:
         logger.error("Unable to register for non-command-based outgoing messages, pattern=" + pattern)
         return False

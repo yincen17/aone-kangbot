@@ -9,8 +9,7 @@ from .uniborg import UniborgUtil, Uniborg
 
 
 # When a name is matched, the import is overriden, and our custom object is returned
-modules = {"userbot": RaphielgangConfig, "userbot.events": RaphielgangEvents,
-           "uniborg": Uniborg, "uniborg.util": UniborgUtil}
+modules = {"userbot": RaphielgangConfig, "userbot.events": RaphielgangEvents, "uniborg": Uniborg, "uniborg.util": UniborgUtil}
 
 
 class BotCompat(MetaPathFinder, Loader):
