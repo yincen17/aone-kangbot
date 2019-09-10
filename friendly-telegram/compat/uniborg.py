@@ -24,7 +24,23 @@ class UniborgClient:
         cb(type("__UniborgShimMod__" + self._module, (self.__UniborgShimMod__Base,), dict())(self))
 
     def __init__(self):
+        self.instance_id = -1
         self._storage = None  # TODO
+        self._config = UniborgConfig()
+        self._commands = {}
+        self._watchers = []
+        self._unknowns = []
+        self._wrapper = None  # Set in registerfunc
+
+    def _ensure_unknowns(self):
+        if self.instance_id < 0:
+            type(self).instance_count += 1
+            self.instance_id = type(self).instance_count
+        self._commands["borgcmd" + str(self.instance_id)] = self._unknown_command
+
+    def _unknown_command(self, message):
+        message.message = "." + message.message[len("borgcmd" + str(self.instance_id)) + 1:]
+        return asyncio.gather(*[uk(message, "") for uk in self._unknowns])
 
     def on(self, event):
         def subreg(func):
