@@ -1,6 +1,10 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
+<<<<<<< HEAD
 # Licensed under the Raphielscape Public License, Version 1.b (the "License");
+=======
+# Licensed under the Raphielscape Public License, Version 1.d (the "License");
+>>>>>>> 5157fb8... userbot / treewide: Refactor licence from 1.c to 1.d
 # you may not use this file except in compliance with the License.
 #
 # This script wont run your bot, it just generates a session.
