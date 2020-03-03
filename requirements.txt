@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 aiohttp
 aria2p
 async_generator
+=======
+kbbi
+pySmartDL
+requests
+https://github.com/AyraHikari/pyrogram/archive/asyncio-dev.zip
+git+https://github.com/pytube3/pytube3.git
+TgCrypto
+pydrive
+sqlalchemy
+psycopg2
+>>>>>>> fe2bb96... Feature : Added module kbbi indonesian dictionary, usage kbbi (text)
 bs4
 cowpy
 # cryptg>=1.0.0
