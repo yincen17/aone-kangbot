@@ -224,7 +224,7 @@ async def ban(bon):
         return
 
     # Announce that we're going to whack the pest
-    await bon.edit("`Whacking the pest!`")
+    await bon.edit("`Memblokir!`")
 
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id,
@@ -239,15 +239,15 @@ async def ban(bon):
             await reply.delete()
     except BadRequestError:
         await bon.edit(
-            "`I dont have message nuking rights! But still he was banned!`")
+            "`Asem Gua Ngak Punya Right! Tapi dia Telah Diblokir!`")
         return
     # Delete message and then tell that the command
     # is done gracefully
     # Shout out the ID, so that fedadmins can fban later
     if reason:
-        await bon.edit(f"`{str(user.id)}` was banned !!\nReason: {reason}")
+        await bon.edit(f"`{str(user.id)}` Telah Diblokir!!\nKarena: {reason}")
     else:
-        await bon.edit(f"`{str(user.id)}` was banned !!")
+        await bon.edit(f"`{str(user.id)}` Telah Diblokir !!")
     # Announce to the logging group if we have banned the person
     # successfully!
     if BOTLOG:
@@ -271,7 +271,7 @@ async def nothanos(unbon):
         return
 
     # If everything goes well...
-    await unbon.edit("`Unbanning...`")
+    await unbon.edit("`Membuka Blokir..`")
 
     user = await get_user_from_event(unbon)
     user = user[0]
@@ -283,7 +283,7 @@ async def nothanos(unbon):
     try:
         await unbon.client(
             EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await unbon.edit("```Unbanned Successfully```")
+        await unbon.edit("```Blokir Berhasil Dibuka```")
 
         if BOTLOG:
             await unbon.client.send_message(
@@ -291,7 +291,7 @@ async def nothanos(unbon):
                 f"USER: [{user.first_name}](tg://user?id={user.id})\n"
                 f"CHAT: {unbon.chat.title}(`{unbon.chat_id}`)")
     except UserIdInvalidError:
-        await unbon.edit("`Uh oh my unban logic broke!`")
+        await unbon.edit("`Maaf Logika Buka Blokir Rusak!`")
 
 
 @register(outgoing=True, pattern="^.mute(?: |$)(.*)")
