@@ -520,32 +520,15 @@ SLAP_TEMPLATES = [
     "{hits} {victim} dengan {item}.",
     "{hits} {victim} ke wajah dengan {item}.",
     "{throws} sebuah  {item} kepada {victim}.",
-    "mengambil sebuah {item} dan melemparkan {throws} kepada {victim}'wajahnya.",
-    "{hits} a {item} at {victim}.", "{throws} a few {item} at {victim}.",
-    "grabs a {item} and {throws} it in {victim}'s face.",
-    "launches a {item} in {victim}'s general direction.",
-    "sits on {victim}'s face while slamming a {item} {where}.",
-    "starts slapping {victim} silly with a {item}.",
-    "pins {victim} down and repeatedly {hits} them with a {item}.",
-    "grabs up a {item} and {hits} {victim} with it.",
-    "starts slapping {victim} silly with a {item}.",
-    "holds {victim} down and repeatedly {hits} them with a {item}.",
-    "prods {victim} with a {item}.",
-    "picks up a {item} and {hits} {victim} with it.",
-    "ties {victim} to a chair and {throws} a {item} at them.",
-    "{hits} {victim} {where} with a {item}.",
-    "ties {victim} to a pole and whips them {where} with a {item}."
-    "gave a friendly push to help {victim} learn to swim in lava.",
-    "sent {victim} to /dev/null.", "sent {victim} down the memory hole.",
-    "beheaded {victim}.", "threw {victim} off a building.",
-    "replaced all of {victim}'s music with Nickelback.",
-    "spammed {victim}'s email.", "made {victim} a knuckle sandwich.",
+    "mengambil  {item} dan {hits} {victim} dengan itu.",
+    "Mengambil Sebuah {item} dan {hits} {victim} Dengan itu.",
+    "Menjatuhkan {victim} Ke Lava.",
+    "Mengirimkan {victim} ke /dev/null.", "Membuang {victim} Ke Laut.",
+    "Mengeluarkan {victim} Dari Bumi.",
     "slapped {victim} with pure nothing.",
-    "hit {victim} with a small, interstellar spaceship.",
-    "quickscoped {victim}.", "put {victim} in check-mate.",
-    "RSA-encrypted {victim} and deleted the private key.",
-    "put {victim} in the friendzone.",
-    "slaps {victim} with a DMCA takedown request!"
+    "Menaruh {victim} di Pluto.",
+    "slaps {victim} with a DMCA takedown request!",
+    "Mengehack Seluruh akun {victim}"
 ]
 
 ITEMS = [
@@ -596,10 +579,8 @@ THROW = [
 
 HIT = [
     "Memukul",
-    "Pukulan Keras",
-    "Menampar",
+    "melemparkan",
     "Memukuli",
-    "Tamparan Keras",
 ]
 
 WHERE = ["in the chest", "on the head", "on the butt", "on the crotch"]
