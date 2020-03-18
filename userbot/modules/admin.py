@@ -572,7 +572,7 @@ async def rm_deletedacc(show):
 
 
     if del_u > 0:
-        del_status = f"Cleaned **{del_u}** deleted account(s)"
+        del_status = f"Dibersihkan **{del_u}** Akun Sampah(s)"
 
     if del_a > 0:
         del_status = f"Cleaned **{del_u}** deleted account(s) \
