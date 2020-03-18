@@ -536,7 +536,7 @@ async def rm_deletedacc(show):
                 del_u += 1
                 await sleep(1)
         if del_u > 0:
-            del_status = f"`Ditemukan` **{del_u}** `Akun Sampah Pada Grup Ini,\n
+            del_status = f"`Ditemukan` **{del_u}** `Akun Sampah Pada Grup Ini,\
             \Bersihkan Dengan Perintah .zombies clean`"
         await show.edit(del_status)
         return
