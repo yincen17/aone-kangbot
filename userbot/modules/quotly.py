@@ -10,16 +10,16 @@ async def _(event):
     if event.fwd_from:
         return 
     if not event.reply_to_msg_id:
-       await event.edit("```Reply to any user message.```")
+       await event.edit("```balasa ke pesan siapa saja .```")
        return
     reply_message = await event.get_reply_message() 
     if not reply_message.text:
-       await event.edit("```Reply to text message```")
+       await event.edit("```balasa ke pesan text``")
        return
     chat = "@QuotLyBot"
     sender = reply_message.sender
     if reply_message.sender.bot:
-       await event.edit("```Reply to actual users message.```")
+       await event.edit("```balasa ke pesan orang.```")
        return
     await event.edit("```Making a Quote```")
     async with bot.conversation(chat) as conv:
@@ -28,10 +28,10 @@ async def _(event):
               await bot.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
-              await event.reply("```Please unblock @QuotLyBot and try again```")
+              await event.reply("```buka blokir @QuotLyBot dan coba lagi```")
               return
           if response.text.startswith("Hi!"):
-             await event.edit("```Can you kindly disable your forward privacy settings for good?```")
+             await event.edit("```anjenk di private akunya! ```")
           else: 
              await event.delete()   
              await bot.forward_messages(event.chat_id, response.message)
