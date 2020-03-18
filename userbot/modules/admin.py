@@ -126,7 +126,7 @@ async def promote(promt):
                                  delete_messages=True,
                                  pin_messages=True)
 
-    await promt.edit("`Promoting...`")
+    await promt.edit("`Menaikan Jabatan.....`")
     user, rank = await get_user_from_event(promt)
     if not rank:
         rank = "Administrator"  # Just in case.
@@ -139,7 +139,7 @@ async def promote(promt):
     try:
         await promt.client(
             EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await promt.edit("`Promoted Successfully!`")
+        await promt.edit("`Selamat Berhasil Menduduki Jabatan!`")
 
     # If Telethon spit BadRequestError, assume
     # we don't have Promote permission
@@ -168,7 +168,7 @@ async def demote(dmod):
         return
 
     # If passing, declare that we're going to demote
-    await dmod.edit("`Demoting...`")
+    await dmod.edit("`Memecat...`")
     rank = "admeme"  # dummy rank, lol.
     user = await get_user_from_event(dmod)
     user = user[0]
@@ -194,7 +194,7 @@ async def demote(dmod):
     except BadRequestError:
         await dmod.edit(NO_PERM)
         return
-    await dmod.edit("`Demoted Successfully!`")
+    await dmod.edit("`Berhasil Dipecat!`")
 
     # Announce to the logging group if we have demoted successfully
     if BOTLOG:
@@ -526,10 +526,10 @@ async def rm_deletedacc(show):
 
     con = show.pattern_match.group(1).lower()
     del_u = 0
-    del_status = "`No deleted accounts found, Group is clean`"
+    del_status = "`Tidak Ada Akun Sampah Terdeteksi, Selamat Grup Anda Bersih`"
 
     if con != "clean":
-        await show.edit("`Searching for ghost/deleted/zombie accounts...`")
+        await show.edit("`Mencari Akun Sampah....`")
         async for user in show.client.iter_participants(show.chat_id):
 
             if user.deleted:
@@ -548,10 +548,10 @@ async def rm_deletedacc(show):
 
     # Well
     if not admin and not creator:
-        await show.edit("`I am not an admin here!`")
+        await show.edit("`Asem Gua Bukan Admin!`")
         return
 
-    await show.edit("`Deleting deleted accounts...\nOh I can do that?!?!`")
+    await show.edit("`Memproses Menghapus Akun Sampah!`")
     del_u = 0
     del_a = 0
 
@@ -561,7 +561,7 @@ async def rm_deletedacc(show):
                 await show.client(
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS))
             except ChatAdminRequiredError:
-                await show.edit("`I don't have ban rights in this group`")
+                await show.edit("`Tidak Ada Izin Untuk Melakukan Ini`")
                 return
             except UserAdminInvalidError:
                 del_u -= 1
@@ -576,7 +576,7 @@ async def rm_deletedacc(show):
 
     if del_a > 0:
         del_status = f"Cleaned **{del_u}** deleted account(s) \
-        \n**{del_a}** deleted admin accounts are not removed"
+        \n**{del_a}** Akun Admin Terhapus Tidak Dapat Dibersihkan"
 
 
     await show.edit(del_status)
