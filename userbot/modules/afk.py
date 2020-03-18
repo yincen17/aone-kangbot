@@ -64,7 +64,7 @@ async def mention_afk(mention):
             if mention.sender_id not in USERS:
                 if AFKREASON:
                     await mention.reply(f"I'm AFK right now.\
-                    \nSince `{afk_time} {datetime_ID}.`\
+                    \nSince `{afk_time} {tz_ID}.`\
                         \nBecause I'm `{AFKREASON}.`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -74,7 +74,7 @@ async def mention_afk(mention):
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await mention.reply(f"I'm still AFK.\
-                            \nSince `{afk_time} {datetime_ID}.`\
+                            \nSince `{afk_time} {tz_ID}.`\
                             \nReason: `{AFKREASON}.`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -105,7 +105,7 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(f"I'm AFK right now.\
-                    \nSince `{afk_time} {datetime_ID}.`\
+                    \nSince `{afk_time} {tz_ID}.`\
                     \nReason: `{AFKREASON}.`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -115,7 +115,7 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(f"I'm still AFK.\
-                        \nSince `{afk_time} {datetime_ID}.`\
+                        \nSince `{afk_time} {tz_ID}.`\
                         \nReason: `{AFKREASON}.`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))

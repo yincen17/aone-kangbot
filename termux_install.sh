@@ -34,7 +34,7 @@ clear
 pkg update && pkg upgrade -y
 pkg install clang curl git libcrypt libffi libiconv libjpeg* libjpeg-turbo libwebp libxml2 libxslt make ndk-sysroot openssl postgresql python readline wget zlib -y
 
-git clone https://github.com/aone-id/aone-kangbot.git
+git clone https://github.com/yincen17/aone-kangbot.git
 cd aone-kangbot
 
 pip install --upgrade pip setuptools
