@@ -19,9 +19,9 @@ async def _(event):
     chat = "@QuotLyBot"
     sender = reply_message.sender
     if reply_message.sender.bot:
-       await event.edit("```balasa ke pesan orang.```")
+       await event.edit("```balas ke pesan orang.```")
        return
-    await event.edit("```Making a Quote```")
+    await event.edit("```Menkinversi menjadi Quote```")
     async with bot.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1031952739))
