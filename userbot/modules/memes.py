@@ -527,6 +527,10 @@ SLAP_TEMPLATES = [
     "Mengeluarkan {victim} Dari Bumi.",
     "Melempar {victim} Ke luar angkasa.",
     "Menaruh {victim} di Pluto.",
+    "Melemparkan sebuah {item} ke {victim}.",
+    "Melemparkan {item} kepada {victim}.",
+    "Menampar {victim} menggunakan {item}.",
+    "Membuang {victim} Ke udara.",
     "Mengehack Seluruh akun {victim}"
 ]
 
@@ -568,6 +572,7 @@ ITEMS = [
     "Satelit Nasa",
     "Matahari",
     "Meteor",
+    "Berkas Kantor",
     "Asteroid",
 ]
 
@@ -578,7 +583,7 @@ THROW = [
 
 HIT = [
     "Memukul",
-    "melemparkanya",
+    "melemparkan",
     "Memukuli",
 ]
 
