@@ -81,7 +81,7 @@ async def pipcheck(pip):
     """ For .pip command, do a pip search. """
     pipmodule = pip.pattern_match.group(1)
     if pipmodule:
-        await pip.edit("`Searching . . .`")
+        await pip.edit("`Mencari Pip . . .`")
         invokepip = f"pip3 search {pipmodule}"
         pipc = await asyncrunapp(
             invokepip,
@@ -95,7 +95,7 @@ async def pipcheck(pip):
 
         if pipout:
             if len(pipout) > 4096:
-                await pip.edit("`Output too large, sending as file`")
+                await pip.edit("`Keluaranya kegedeam Upload Menjadi file Text`")
                 file = open("output.txt", "w+")
                 file.write(pipout)
                 file.close()
@@ -116,21 +116,21 @@ async def pipcheck(pip):
                            f"{invokepip}"
                            "`\n**Result: **\n`No Result Returned/False`")
     else:
-        await pip.edit("`Use .help pip to see an example`")
+        await pip.edit("`gunakan .help pip untuk melihat contoh`")
 
 
 @register(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit("`"
-                     f"-------------------------------------- \n"
+                     f"------------------------------------ \n"
                      "Aone-Kangbot Modifan Yincen Berjalan! \n\n"
-                     f"---------------------------------------\n"
+                     f"------------------------------------\n"
                      f"Telethon version: {version.__version__} \n"
                      f"Python: {python_version()} \n"
-                     f"--------------------------------------- \n\n"
+                     f"------------------------------------ \n\n"
                      f"User: {DEFAULTUSER} \n"
-                     f"---------------------------------------- \n"
+                     f"------------------------------------ \n"
                      " \n\n"
                      "`")    
 
@@ -145,7 +145,7 @@ async def amireallyaliveuser(username):
         newuser = message[8:]
         global DEFAULTUSER
         DEFAULTUSER = newuser
-        output = 'Successfully changed user to ' + newuser + '!'
+        output = 'Nama User Berhasil diubah Menjadi ' + newuser + '!'
     await username.edit("`" f"{output}" "`")
 
 
@@ -154,7 +154,7 @@ async def amireallyalivereset(ureset):
     """ For .resetalive command, reset the username in the .alive command. """
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-    await ureset.edit("`" "Successfully reset user for alive!" "`")
+    await ureset.edit("`" "Nama User Telah Di Hapus!" "`")
 
 
 CMD_HELP.update(
