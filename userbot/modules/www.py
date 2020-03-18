@@ -57,19 +57,19 @@ def speed_convert(size):
 async def neardc(event):
     """ For .dc command, get the nearest datacenter information. """
     result = await event.client(functions.help.GetNearestDcRequest())
-    await event.edit(f"Country : `{result.country}`\n"
-                     f"Nearest Datacenter : `{result.nearest_dc}`\n"
-                     f"This Datacenter : `{result.this_dc}`")
+    await event.edit(f"Negara : `{result.country}`\n"
+                     f"Data Center Terdekat : `{result.nearest_dc}`\n"
+                     f"Data Center Ini : `{result.this_dc}`")
 
 
 @register(outgoing=True, pattern="^.ping$")
 async def pingme(pong):
     """ For .ping command, ping the userbot from any chat.  """
     start = datetime.now()
-    await pong.edit("`Pong!`")
+    await pong.edit("`Bak!`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit("`Pong!\n%sms`" % (duration))
+    await pong.edit("`Buk Kecepatan Pukulan!\n%sms`" % (duration))
 
 
 CMD_HELP.update(
