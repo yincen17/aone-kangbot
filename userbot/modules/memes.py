@@ -523,11 +523,11 @@ SLAP_TEMPLATES = [
     "mengambil  {item} dan {hits} {victim} dengan itu.",
     "Mengambil Sebuah {item} dan {hits} {victim} Dengan itu.",
     "Menjatuhkan {victim} Ke Lava.",
-    "Mengirimkan {victim} ke /dev/null.", "Membuang {victim} Ke Laut.",
+    "Mengirimkan {victim} ke Kawah.",
+    "Membuang {victim} Ke Laut.",
     "Mengeluarkan {victim} Dari Bumi.",
-    "slapped {victim} with pure nothing.",
+    "Melempar {victim} Ke luar angkasa.",
     "Menaruh {victim} di Pluto.",
-    "slaps {victim} with a DMCA takedown request!",
     "Mengehack Seluruh akun {victim}"
 ]
 
