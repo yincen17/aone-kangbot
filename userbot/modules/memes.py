@@ -519,7 +519,7 @@ CRI = [
 SLAP_TEMPLATES = [
     "{hits} {victim} dengan {item}.",
     "{throws} sebuah  {item} kepada {victim}.",
-    "mengambil  {item} dan {hits} {victim} .",
+    "mengambil  {item} dan {hits} kepada {victim} .",
     "Mengambil Sebuah {item} dan {hits} {victim} Dengan itu.",
     "Melemparkan {item} Ke {victim} Sebanyak Banyaknya .",
     "Menjatuhkan {victim} Ke Lava.",
@@ -590,7 +590,7 @@ THROW = [
 
 HIT = [
     "Memukul",
-    "melemparkan",
+    "melemparkannya",
     "Memukuli",
 ]
 
