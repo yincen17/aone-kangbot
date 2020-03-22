@@ -78,7 +78,7 @@ async def chtream(ch):
     changelog = await gen_chlog(repo, f'HEAD..chtream/{ac_br}')
 
     if not changelog:
-        await ch.edit(f'\n`Bot Anda**Sudah Versi Terbaru** `Dengan` **{ac_br}**\n')
+        await ch.edit(f'\n`Bot Anda**Sudah Versi Terbaru** `Dengan Branch` **{ac_br}**\n')
         return
 
     if conf != "w":
