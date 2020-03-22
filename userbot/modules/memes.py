@@ -585,6 +585,12 @@ ITEMS = [
     "Paku",
     "Tongkat",
     "Tiang Listrik",
+    "Galon Air",
+    "Tombak",
+    "Toa",
+    "Bis",
+    "Dosa",
+    "Kotak Cpu",
     "Asteroid",
 ]
 
