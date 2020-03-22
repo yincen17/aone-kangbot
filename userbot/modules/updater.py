@@ -53,8 +53,8 @@ async def upstream(ups):
     force_update = False
 
     try:
-        txt = "`Oops.. Updater cannot continue due to "
-        txt += "some problems occured`\n\n**LOGTRACE:**\n"
+        txt = "`ups.. Pembaruan Tidak Dapat Dilakukan karena "
+        txt += "Terdapat Masalah Pada`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await ups.edit(f'{txt}\n`directory {error} is not found`')
@@ -101,12 +101,12 @@ async def upstream(ups):
 
     if not changelog and not force_update:
         await ups.edit(
-            f'\n`Your BOT is`  **up-to-date**  `with`  **{ac_br}**\n')
+            f'\n`Bot Anda`  **Sudah Versi Tebaru **  `Dengan Branch`  **{ac_br}**\n')
         repo.__del__()
         return
 
     if conf != "now" and not force_update:
-        changelog_str = f'**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        changelog_str = f'**Pembaruan Tersedia [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await ups.edit("`Changelog is too big, view the file to see it.`")
             file = open("output.txt", "w+")
@@ -120,14 +120,14 @@ async def upstream(ups):
             remove("output.txt")
         else:
             await ups.edit(changelog_str)
-        await ups.respond('`do \".update now\" to update`')
+        await ups.respond('`Lakukan \".update now\" Untuk Memperbarui`')
         return
 
     if force_update:
         await ups.edit(
             '`Force-Syncing to latest stable aone-kangbot code, please wait...`')
     else:
-        await ups.edit('`Updating aone-kangbot, please wait....`')
+        await ups.edit('`Memperbarui  Yincen aone-kangbot Modifikasi , Mohon Menunggu....`')
     # We're in a Heroku Dyno, handle it's memez.
     if HEROKU_APIKEY is not None:
         import heroku3
@@ -168,8 +168,8 @@ async def upstream(ups):
             await ups.edit(f'{txt}\n`Here is the error log:\n{error}`')
             repo.__del__()
             return
-        await ups.edit('`Successfully Updated!\n'
-                       'Restarting, please wait...`')
+        await ups.edit('`Berhasil Diperbaruhi!\n'
+                       'Merestart Bot , Mohon Tunggu...`')
     else:
         # Classic Updater, pretty straightforward.
         try:
