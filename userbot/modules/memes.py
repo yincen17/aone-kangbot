@@ -533,6 +533,7 @@ SLAP_TEMPLATES = [
     "Melemparkan {item} kepada {victim}.",
     "Menampar {victim} menggunakan {item}.",
     "Membuang {victim} Ke udara.",
+    "{victim} Telah Dilock Down.",
     "Mengehack Seluruh akun {victim}"
 ]
 
