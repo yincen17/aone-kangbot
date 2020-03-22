@@ -10,7 +10,7 @@ import os
 # from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
 from userbot.util import admin_cmd, humanbytes, progress, time_formatter
 
-# @borg.on(admin_cmd("compress"))
+#  @borg.on(admin_cmd("compress"))
 @register(outgoing=True, pattern=r"^.compress(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
