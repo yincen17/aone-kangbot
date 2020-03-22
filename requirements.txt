@@ -47,3 +47,4 @@ telegraph
 PyGithub
 pymongo[srv]
 redis
+covid
