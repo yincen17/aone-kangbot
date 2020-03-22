@@ -4,6 +4,7 @@ from telethon import events
 import asyncio
 import zipfile
 from pySmartDL import SmartDL
+from userbot.events import register
 import time
 import os
 # from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
