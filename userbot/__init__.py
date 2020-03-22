@@ -53,7 +53,21 @@ if CONFIG_CHECK:
 API_KEY = os.environ.get("API_KEY", None)
 API_HASH = os.environ.get("API_HASH", None)
 
+#Mongo DB
+MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
 
+# Init Mongo
+MONGOCLIENT = MongoClient(MONGO_DB_URI, 27017, serverSelectionTimeoutMS=1)
+MONGO = MONGOCLIENT.userbot
+
+
+def is_mongo_alive():
+    try:
+        MONGOCLIENT.server_info()
+    except BaseException:
+        return False
+    return True
+    
 # Userbot Session String
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
