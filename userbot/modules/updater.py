@@ -108,7 +108,7 @@ async def upstream(ups):
     if conf != "now" and not force_update:
         changelog_str = f'**Pembaruan Tersedia [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
         if len(changelog_str) > 4096:
-            await ups.edit("`Changelog is too big, view the file to see it.`")
+            await ups.edit("`List Pembaruan Terlalu Banyak,Mengubah Ke bentuk File Text.`")
             file = open("output.txt", "w+")
             file.write(changelog_str)
             file.close()
@@ -177,8 +177,8 @@ async def upstream(ups):
         except GitCommandError:
             repo.git.reset("--hard", "FETCH_HEAD")
         reqs_upgrade = await update_requirements()
-        await ups.edit('`Successfully Updated!\n'
-                       'Bot is restarting... Wait for a second! and happy kanging`')
+        await ups.edit('`Berhasil DiPerbaruhi!\n'
+                       'Merestart Bot... Tunggu Sebentar Dan Selamat Menikmati`')
         # Spin a new instance of bot
         args = [sys.executable, "-m", "userbot"]
         execle(sys.executable, *args, environ)
