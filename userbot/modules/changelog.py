@@ -36,12 +36,12 @@ async def is_off_br(br):
 @register(outgoing=True, pattern="^.chl(?: |$)(.*)")
 async def chtream(ch):
     "For .update command, check if the bot is up to date, update if specified"
-    await ch.edit("`Checking for updates, please wait....`")
+    await ch.edit("`Memeriksa Pembaruan Mohon Menunggu....`")
     conf = ch.pattern_match.group(1).lower()
     off_repo = 'https://github.com/yincen17/aone-kangbot.git'
 
     try:
-        txt = "`Oops.. Updater cannot continue due to some problems occured`\n\n**LOGTRACE:**\n"
+        txt = "`Asem.. Pembaruan Tidak Dapat Dilakukan Ada Masalah`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await ch.edit(f'{txt}\n`directory {error} is not found`')
@@ -78,13 +78,13 @@ async def chtream(ch):
     changelog = await gen_chlog(repo, f'HEAD..chtream/{ac_br}')
 
     if not changelog:
-        await ch.edit(f'\n`Your BOT is` **up-to-date** `with` **{ac_br}**\n')
+        await ch.edit(f'\n`Bot Anda**Sudah Versi Terbaru** `Dengan` **{ac_br}**\n')
         return
 
     if conf != "w":
-        changelog_str = f'**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        changelog_str = f'**Pembaruan Tersedia  [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
         if len(changelog_str) > 4096:
-            await ch.edit("`Changelog is too big, sending it as a file.`")
+            await ch.edit("`List Pembaruan terlalu besar Bangsat Memgirimnya dalam Bentuk File text.`")
             file = open("output.txt", "w+")
             file.write(changelog_str)
             file.close()
@@ -97,13 +97,13 @@ async def chtream(ch):
         else:
             await ch.edit(changelog_str)
         await ch.respond(
-            "`do \".update \" to update\nif using Heroku`")
+            "`lakukan \".update \" Untuk Memperbarui Jika Menggunakan Heroku`")
         return
 
-    await ch.edit('`New update found, updating...`')
+    await ch.edit('`Pembaruan Ditemukan Memeperbarui`')
     ch_rem.fetch(ac_br)
-    await ch.edit('`Successfully Updated!\n'
-                   'Bot is restarting... Wait for a second!`')
+    await ch.edit('`Berhasil Diperbarui!\n'
+                   'Bot Merestart... Silahkan Menunggu!`')
     await install_requirements()
     await bot.disconnect()
     # Spin a new instance of bot
