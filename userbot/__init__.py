@@ -69,6 +69,19 @@ def is_mongo_alive():
         return False
     return True
     
+# Init Redis
+# Redis will be hosted inside the docker container that hosts the bot
+# We need redis for just caching, so we just leave it to non-persistent
+REDIS = StrictRedis(host='localhost', port=6379, db=0)
+
+
+def is_redis_alive():
+    try:
+        REDIS.ping()
+        return True
+    except BaseException:
+        return False
+    
 # Userbot Session String
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
