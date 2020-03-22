@@ -21,13 +21,13 @@ from userbot.modules.admin import get_user_from_event
 
 # ================= CONSTANT =================
 METOOSTR = [
-    "Me too thanks",
-    "Haha yes, me too",
-    "Same lol",
-    "Me irl",
-    "Same here",
-    "Haha yes",
-    "Me rn",
+    "Gua Juga Loo",
+    "Sama Ane juga ",
+    "Sama",
+    "Disini Juga sama",
+    "Sama Woi",
+    "Sama Juga",
+    "Gua Juga",
 ]
 
 ZALG_LIST = [[
@@ -521,6 +521,7 @@ SLAP_TEMPLATES = [
     "{throws} sebuah  {item} kepada {victim}.",
     "mengambil  {item} dan {hits} {victim} .",
     "Mengambil Sebuah {item} dan {hits} {victim} Dengan itu.",
+    "Melemparkan {item} Ke {victim} Sebanyak Banyaknya .",
     "Menjatuhkan {victim} Ke Lava.",
     "Mengirimkan {victim} ke Kawah.",
     "Membuang {victim} Ke Laut.",
@@ -528,6 +529,7 @@ SLAP_TEMPLATES = [
     "Melempar {victim} Ke luar angkasa.",
     "Menaruh {victim} di Pluto.",
     "Melemparkan sebuah {item} ke {victim}.",
+    "Memakai {item} Untuk Memukuli {victim}.",
     "Melemparkan {item} kepada {victim}.",
     "Menampar {victim} menggunakan {item}.",
     "Membuang {victim} Ke udara.",
@@ -564,7 +566,7 @@ ITEMS = [
     "Ember Besi",
     "Besi Beton",
     "Timah Panas",
-    "Harimau",
+    "Logam",
     "Batu Krikil",
     "Makanan Basi",
     "Pesawat AirBus",
@@ -573,6 +575,11 @@ ITEMS = [
     "Matahari",
     "Meteor",
     "Berkas Kantor",
+    "Sapu Lidi",
+    "Kayu",
+    "Gergaji",
+    "Monitor Bekas",
+    "Sepeda Motor",
     "Asteroid",
 ]
 
