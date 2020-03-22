@@ -530,6 +530,7 @@ SLAP_TEMPLATES = [
     "Menaruh {victim} di Pluto.",
     "Melemparkan sebuah {item} ke {victim}.",
     "Memakai {item} Untuk Memukuli {victim}.",
+    "Menampar {victim Menggunakan {item} Secara Beruntun.",
     "Melemparkan {item} kepada {victim}.",
     "Menampar {victim} menggunakan {item}.",
     "Membuang {victim} Ke udara.",
@@ -581,6 +582,10 @@ ITEMS = [
     "Gergaji",
     "Monitor Bekas",
     "Sepeda Motor",
+    "Batu Bata",
+    "Paku",
+    "Tongkat",
+    "Tiang Listrik",
     "Asteroid",
 ]
 
