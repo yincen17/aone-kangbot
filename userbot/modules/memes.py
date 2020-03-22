@@ -531,7 +531,6 @@ SLAP_TEMPLATES = [
     "Melemparkan sebuah {item} ke {victim}.",
     "Memakai {item} Untuk Memukuli {victim}.",
     "Menampar {victim Menggunakan {item} Secara Beruntun.",
-    "Melemparkan {item} kepada {victim}.",
     "Menampar {victim} menggunakan {item}.",
     "Membuang {victim} Ke udara.",
     "{victim} Telah Dilock Down.",
