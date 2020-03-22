@@ -45,3 +45,4 @@ git+https://github.com/johnwmillr/LyricsGenius.git
 lyricsgenius
 telegraph
 PyGithub
+pymongo[srv]
