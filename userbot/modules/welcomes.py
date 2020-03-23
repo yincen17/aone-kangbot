@@ -11,7 +11,7 @@ from userbot import CMD_HELP, bot, LOGS, CLEAN_WELCOME, BOTLOG_CHATID
 
 from asyncio import sleep
 
->>>>>>> 5157fb8... userbot / treewide: Refactor licence from 1.c to 1.d
+ #>>>>>>> 5157fb8... userbot / treewide: Refactor licence from 1.c to 1.d
 from telethon.events import ChatAction
 
 
