@@ -3,6 +3,8 @@ aiohttp
 aria2p
 async_generator
 =======
+pymongo[srv]
+pymongo
 pySmartDL
 requests
 https://github.com/AyraHikari/pyrogram/archive/asyncio-dev.zip
@@ -56,6 +58,5 @@ git+https://github.com/johnwmillr/LyricsGenius.git
 lyricsgenius
 telegraph
 PyGithub
-pymongo[srv]
 redis
 covid
