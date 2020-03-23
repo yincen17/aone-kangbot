@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ #<<<<<<< HEAD
 from userbot.events import register
 from userbot import CMD_HELP, bot, LOGS, CLEAN_WELCOME, BOTLOG_CHATID
 =======
