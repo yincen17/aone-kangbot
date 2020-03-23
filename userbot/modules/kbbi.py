@@ -6,7 +6,7 @@ from kbbi import KBBI
 from pyrogram import Filters
 
 # from nana import app, Command
-from nana import app, Command
+from userbot import app, Command
 
 __MODULE__ = "KBBI"
 __HELP__ = """
