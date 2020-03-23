@@ -1,7 +1,7 @@
  #<<<<<<< HEAD
 from userbot.events import register
 from userbot import CMD_HELP, bot, LOGS, CLEAN_WELCOME, BOTLOG_CHATID
-=======
+# =======
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
