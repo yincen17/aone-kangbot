@@ -178,3 +178,5 @@ class Modules():
                 logging.debug("Removing command for unload " + repr(command))
                 self.commands.remove(command)
         return worked
+
+modules = register_module
