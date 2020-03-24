@@ -19,7 +19,6 @@ from redis import StrictRedis
 from requests import get
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-
 load_dotenv("config.env")
 
 # Bot Logs setup:
