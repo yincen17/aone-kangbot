@@ -58,3 +58,4 @@ telegraph
 PyGithub
 redis
 covid
+future-fstrings>=1.0.0
