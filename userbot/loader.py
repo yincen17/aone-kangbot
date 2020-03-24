@@ -42,6 +42,7 @@ class Module():
     async def handle_command(self, message):
         logging.error("NI! handle_command")
 
+tds = register_module #untuk mempersingkat
 
 class Modules():
     def __init__(self):
@@ -51,7 +52,7 @@ class Modules():
 
     def register_all(self, skip, babelfish):
         from .compat import uniborg  # Uniborg is disabled because it Doesn't Work™️.
-        from . import compat  # Avoid circular import 
+        from . import compat  # Avoid circular import line 54 harunsya
         from .compat import uniborg
         from . import compat
         self._compat_layer = compat.activate([])
