@@ -179,4 +179,4 @@ class Modules():
                 self.commands.remove(command)
         return worked
 
-modules = register_module
+module = register_module
