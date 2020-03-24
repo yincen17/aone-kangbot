@@ -8,7 +8,7 @@ import sys
 import asyncio
 
 from functools import wraps
-
+from userbot import loader
 
 logger = logging.getLogger(__name__)
 
