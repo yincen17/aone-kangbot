@@ -198,7 +198,7 @@ class RaphielgangEvents():
         self.instances = {}
 
     class RaphielgangEventsSub():
-        class __RaphielgangShimMod__Base(loader.Module):
+        class __RaphielgangShimMod__Base(loader.Modules):
             def __init__(self, events_instance):
                 self._events = events_instance
                 self.commands = events_instance._commands
