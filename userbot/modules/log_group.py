@@ -20,7 +20,7 @@ import logging
 
 from telethon.tl.types import MessageEntityHashtag, MessageEntityBold, InputPeerSelf
 from telethon.tl.types import MessageEntityCode, MessageEntityMentionName, InputPeerUser
-
+from userbot import loader
 from .. import loader, utils
 
 logger = logging.getLogger(__name__)
@@ -30,7 +30,7 @@ def register(cb):
     cb(LoggerMod())
 
 
-# @loader.tds
+@loader.tds
 class LoggerMod(loader.Module):
     """Description for module"""
     strings = {"name": "Logger",

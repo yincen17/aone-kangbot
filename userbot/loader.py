@@ -42,7 +42,6 @@ class Module():
     async def handle_command(self, message):
         logging.error("NI! handle_command")
 
-tds = register_module #untuk mempersingkat
 
 class Modules():
     def __init__(self):
