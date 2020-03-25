@@ -118,6 +118,9 @@ DB_URI = os.environ.get("DATABASE_URL", None)
 # OCR API key
 OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
 
+#Quotes Api Key
+QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
+
 # remove.bg API key
 REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
 
