@@ -5,7 +5,7 @@ from importlib.abc import Loader, MetaPathFinder
 from importlib.machinery import ModuleSpec
 
 # from .raphielgang import RaphielgangConfig, RaphielgangEvents
-from .uniborg import UniborgUtil, Uniborg
+#from .uniborg import UniborgUtil, Uniborg
 
 
 # When a name is matched, the import is overriden, and our custom object is returned
