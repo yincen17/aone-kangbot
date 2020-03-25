@@ -59,3 +59,4 @@ PyGithub
 redis
 covid
 future-fstrings>=1.0.0
+cryptg>=0.2.post0
