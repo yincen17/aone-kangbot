@@ -19,7 +19,9 @@ Search from kbbi, you can reply to text message.
 """
 
 
-@bot.on_message(Filters.user("self") & Filters.command(["kbbi"], Command))
+# @bot.on_message(Filters.user("self") & Filters.command(["kbbi"], Command))
+
+@register(outgoing=True, pattern="^.kbbi(?: |$)(.*)")
 async def kbbi(client, message):
     await message.edit("`Processing...`")
     if message.reply_to_message:
