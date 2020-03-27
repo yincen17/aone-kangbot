@@ -7,7 +7,7 @@ from pySmartDL import SmartDL
 from userbot.events import register
 import time
 import os
-from userbot import TEMP_DOWNLOAD_DIRECTORY
+from userbot import TEMP_DOWNLOAD_DIRECTORY ,bot
 # from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
 from userbot.util import admin_cmd, humanbytes, progress, time_formatter
 
@@ -26,7 +26,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await userbot.download_media(
+            downloaded_file_name = await bot.download_media(
                 reply_message,
                 TEMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -38,7 +38,7 @@ async def _(event):
         except Exception as e:  # pylint:disable=C0103,W0703
             await mone.edit(str(e))
     zipfile.ZipFile(directory_name + '.zip', 'w', zipfile.ZIP_DEFLATED).write(directory_name)
-    await userbot.send_file(
+    await bot.send_file(
         event.chat_id,
         directory_name + ".zip",
         caption="Zipped By EyePatch",
