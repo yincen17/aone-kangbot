@@ -7,6 +7,7 @@ from pySmartDL import SmartDL
 from userbot.events import register
 import time
 import os
+from userbot import TEMP_DOWNLOAD_DIRECTORY
 # from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
 from userbot.util import admin_cmd, humanbytes, progress, time_formatter
 
