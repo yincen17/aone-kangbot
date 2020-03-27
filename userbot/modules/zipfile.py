@@ -20,15 +20,15 @@ async def _(event):
         await event.edit("Reply to a file to compress it.")
         return
     mone = await event.edit("Processing ...")
-    if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
             downloaded_file_name = await borg.download_media(
                 reply_message,
-                TMP_DOWNLOAD_DIRECTORY,
+                TEMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
                     progress(d, t, mone, c_time, "trying to download")
                 )
