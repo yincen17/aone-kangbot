@@ -6,7 +6,7 @@ from kbbi import KBBI
 from pyrogram import Filters
 
 # from nana import app, Command
-from userbot import app, Command
+from userbot import Command ,bot
 
 __MODULE__ = "KBBI"
 __HELP__ = """
@@ -19,7 +19,7 @@ Search from kbbi, you can reply to text message.
 """
 
 
-@app.on_message(Filters.user("self") & Filters.command(["kbbi"], Command))
+@bot.on_message(Filters.user("self") & Filters.command(["kbbi"], Command))
 async def kbbi(client, message):
     await message.edit("`Processing...`")
     if message.reply_to_message:
