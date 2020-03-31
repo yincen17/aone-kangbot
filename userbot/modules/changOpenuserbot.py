@@ -97,7 +97,7 @@ async def chtream(ch):
         else:
             await ch.edit(changelog_str)
         await ch.respond(
-            "`lakukan \".aonegas \" Untuk Memperbarui dan Bepindah Ke Repo Official Openuserbot`")
+            "`lakukan \".opengas \" Untuk Memperbarui dan Bepindah Ke Repo Official Openuserbot`")
         return
 
     await ch.edit('`Pembaruan Ditemukan Memeperbarui`')
