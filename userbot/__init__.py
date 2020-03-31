@@ -111,7 +111,7 @@ UPSTREAM_REPO_URL = os.environ.get(
     
 UPSTREAM_REPO_URL_Aone = os.environ.get(
     "UPAONE_REPO_URL",
-    "https://github.com/aone-id/aone-kangbot.git")]
+    "https://github.com/aone-id/aone-kangbot.git")
     
 UPSTREAM_REPO_URL_ORI = os.environ.get(
     "UPORIGINAL_REPO_URL",
