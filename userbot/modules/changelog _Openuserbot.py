@@ -82,7 +82,7 @@ async def chtream(ch):
         return
 
     if conf != "w":
-        changelog_str = f'**List Official aone-kang-Userbot [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        changelog_str = f'**List Official OpenUserbot [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await ch.edit("`List Pembaruan terlalu besar Bangsat Memgirimnya dalam Bentuk File text.`")
             file = open("output.txt", "w+")
@@ -97,7 +97,7 @@ async def chtream(ch):
         else:
             await ch.edit(changelog_str)
         await ch.respond(
-            "`lakukan \".aonegas \" Untuk Memperbarui dan Bepindah Ke Repo Official Aone-Kang_userbot`")
+            "`lakukan \".aonegas \" Untuk Memperbarui dan Bepindah Ke Repo Official Openuserbot`")
         return
 
     await ch.edit('`Pembaruan Ditemukan Memeperbarui`')
