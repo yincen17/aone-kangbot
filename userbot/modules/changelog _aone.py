@@ -33,7 +33,7 @@ async def is_off_br(br):
     return
 
 
-@register(outgoing=True, pattern="^.chlaone(?: |$)(.*)")
+@register(outgoing=True, pattern="^.aone(?: |$)(.*)")
 async def chtream(ch):
     "For .update command, check if the bot is up to date, update if specified"
     await ch.edit("`Memeriksa Pembaruan Mohon Menunggu....`")
@@ -82,7 +82,7 @@ async def chtream(ch):
         return
 
     if conf != "w":
-        changelog_str = f'**Pembaruan Tersedia  [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        changelog_str = f'**List Official aone-kang-Userbot [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await ch.edit("`List Pembaruan terlalu besar Bangsat Memgirimnya dalam Bentuk File text.`")
             file = open("output.txt", "w+")
@@ -97,7 +97,7 @@ async def chtream(ch):
         else:
             await ch.edit(changelog_str)
         await ch.respond(
-            "`lakukan \".update \" Untuk Memperbarui Jika Menggunakan Heroku`")
+            "`lakukan \".aonegas \" Untuk Memperbarui dan Bepindah Ke Repo Official Aone-Kang_userbot`")
         return
 
     await ch.edit('`Pembaruan Ditemukan Memeperbarui`')

@@ -44,7 +44,7 @@ async def update_requirements():
         return repr(e)
 
 
-@register(outgoing=True, pattern="^\.updateaone(?: |$)(.*)")
+@register(outgoing=True, pattern="^\.aonegas(?: |$)(.*)")
 async def upstream(ups):
     "For .update command, check if the bot is up to date, update if specified"
     await ups.edit("`Checking for updates, please wait....`")
@@ -186,8 +186,8 @@ async def upstream(ups):
 
 
 CMD_HELP.update({
-    'update':
-    ".update\
+    'aonegas':
+    ".aonegas\
 \nUsage: Checks if the main userbot repository has any updates and shows a changelog if so.\
 \n\n.updateaone\
 \nUsage: Updates your Yincen-aone-kangbot to Official repo Aone-Kang-Bot , if there are any updates in the main aone-kangbot repository."
