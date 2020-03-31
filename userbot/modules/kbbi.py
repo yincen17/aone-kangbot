@@ -8,7 +8,7 @@ from pyrogram import Filters
 # from nana import app, Command
 #from userbot import register ,bot
 from userbot.events import register
-
+from userbot import bot
 __MODULE__ = "KBBI"
 __HELP__ = """
 Search meaning some text from indonesian dictionary
@@ -20,11 +20,7 @@ Search from kbbi, you can reply to text message.
 """
 
 
-# @bot.on_message(Filters.user("self") & Filters.command(["kbbi"], Command))
-
-
-
-@register(outgoing=True, pattern="^.kbbi (message)$")
+@bot.on_message(Filters.user("self") & Filters.command(["kbbi"], Command))
 async def kbbi(client, message):
     await message.edit("`Processing...`")
     if message.reply_to_message:
