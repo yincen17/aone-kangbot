@@ -110,12 +110,12 @@ UPSTREAM_REPO_URL = os.environ.get(
     "https://github.com/yincen17/aone-kangbot.git")
 
 # repo aone-kangbot.   
-UPSTREAM_REPO_URL_Aone = os.environ.get(
+UPAONE_REPO_URL = os.environ.get(
     "UPAONE_REPO_URL",
     "https://github.com/aone-id/aone-kangbot.git")
     
 # repo openuserbot. 
-UPSTREAM_REPO_URL_ORI = os.environ.get(
+UPORIGINAL_REPO_URL = os.environ.get(
     "UPORIGINAL_REPO_URL",
     "https://github.com/mkaraniya/OpenUserBot.git")
 
