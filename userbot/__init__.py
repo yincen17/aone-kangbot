@@ -108,11 +108,13 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
     "https://github.com/yincen17/aone-kangbot.git")
-    
+
+# repo aone-kangbot.   
 UPSTREAM_REPO_URL_Aone = os.environ.get(
     "UPAONE_REPO_URL",
     "https://github.com/aone-id/aone-kangbot.git")
     
+# repo openuserbot. 
 UPSTREAM_REPO_URL_ORI = os.environ.get(
     "UPORIGINAL_REPO_URL",
     "https://github.com/mkaraniya/OpenUserBot.git")
