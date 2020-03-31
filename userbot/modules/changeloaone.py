@@ -113,8 +113,8 @@ async def chtream(ch):
 
 
 CMD_HELP.update({
-    'update':
-    ".aone\
+    'openbot':
+    ".aonegas\
 \nUsage: Checks if the official aone-kang userbot repository has any updates and shows a changelog if so.\
 \n\n.update\
 \nUsage: Updates your userbot, if there are any updates in the Official aone-kang userbot repository."
