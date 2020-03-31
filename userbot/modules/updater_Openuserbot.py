@@ -16,7 +16,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import CMD_HELP, bot, HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL_Aone
+from userbot import CMD_HELP, bot, HEROKU_APIKEY, HEROKU_APPNAME, UPSTREAM_REPO_URL_ORI
 from userbot.events import register
 
 requirements_path = path.join(
@@ -44,12 +44,12 @@ async def update_requirements():
         return repr(e)
 
 
-@register(outgoing=True, pattern="^\.aonegas(?: |$)(.*)")
+@register(outgoing=True, pattern="^\.opengas(?: |$)(.*)")
 async def upstream(ups):
     "For .update command, check if the bot is up to date, update if specified"
     await ups.edit("`Checking for updates, please wait....`")
     conf = ups.pattern_match.group(1)
-    off_repo = UPAONE_REPO_URL
+    off_repo = UPORIGINAL_REPO_URL
     force_update = False
 
     try:
@@ -168,7 +168,7 @@ async def upstream(ups):
             await ups.edit(f'{txt}\n`Here is the error log:\n{error}`')
             repo.__del__()
             return
-        await ups.edit('`Berhasil Berpindah ke Official Repo aone-kangbot!\n'
+        await ups.edit('`Berhasil Berpindah ke Repo OpenUserbot!\n'
                        'Merestart Bot , Mohon Tunggu...`')
     else:
         # Classic Updater, pretty straightforward.
@@ -177,7 +177,7 @@ async def upstream(ups):
         except GitCommandError:
             repo.git.reset("--hard", "FETCH_HEAD")
         reqs_upgrade = await update_requirements()
-        await ups.edit('`Berhasil Berpindah ke Official Repo aone-kangbot!\n'
+        await ups.edit('`Berhasil Berpindah ke Repo OpenUserbot!\n'
                        'Merestart Bot... Tunggu Sebentar Dan Selamat Menikmati`')
         # Spin a new instance of bot
         args = [sys.executable, "-m", "userbot"]
@@ -186,8 +186,8 @@ async def upstream(ups):
 
 
 CMD_HELP.update({
-    'aonegas':
-    ".aonegas\
+    'opengas':
+    ".opengas\
 \nUsage: Checks if the main userbot repository has any updates and shows a changelog if so.\
 \n\n.updateaone\
 \nUsage: Updates your Yincen-aone-kangbot to Official repo Aone-Kang-Bot , if there are any updates in the main aone-kangbot repository."
